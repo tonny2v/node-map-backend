@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-promise-router": "^3.0.3",
+    "mapnik": "^4.0.2",
+    "osrm": "^5.20.0",
+    "pg": "^7.7.1",
+    "promise": "^8.0.2",
+    "sphericalmercator": "^1.0.5",
+    "zlib": "^1.0.5"
+  }
+}
