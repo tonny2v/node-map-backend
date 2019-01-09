@@ -1,12 +1,27 @@
 {
+  "scripts": {
+    "test": "mocha"
+  },
   "dependencies": {
     "express": "^4.16.4",
     "express-promise-router": "^3.0.3",
     "mapnik": "^4.0.2",
+    "mocha": "^5.2.0",
     "osrm": "^5.20.0",
     "pg": "^7.7.1",
     "promise": "^8.0.2",
     "sphericalmercator": "^1.0.5",
     "zlib": "^1.0.5"
+  },
+  "devDependencies": {
+    "eslint": "^5.12.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-google": "^0.11.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-mocha": "^5.2.1",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-react": "^7.12.3"
   }
 }

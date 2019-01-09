@@ -21,7 +21,7 @@ var osrm = new OSRM(
 // http://localhost:8081/osrm?start=114.414307,22.521835&end=114.402290,21.523728
 // https://github.com/Project-OSRM/osrm-backend/blob/master/docs/nodejs/api.md
 
-router.get('/', (req, res) => {
+router.get('/routing', (req, res) => {
   if (!req.query.start || !req.query.end) {
     return res.json({'error':'invalid start and end query'});
   }
@@ -71,3 +71,17 @@ router.get('/:x/:y/:z', async (req, res) => {
   res.setHeader('Content-Type', 'application/x-protobuf');
   res.send(data);
 });
+
+// curl --header "Content-Type: application/json --request POST --data
+
+router.use('/matching', (req, res) => {
+  if (req.body) {
+    osrm.match(req.body, function(err, result) {
+      if (err) throw err;
+      console.log(result.tracepoints); // array of Waypoint objects
+      console.log(result.matchings); // array of Route objects
+      return res.json({'tracepoints': result.tracepoints, 'matchings': result.matchings});
+    });
+  }
+});
+
