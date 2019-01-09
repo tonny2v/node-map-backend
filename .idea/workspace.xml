@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb36e14f-f27d-4a51-869a-89859c94e336" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/tests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/osrm.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/osrm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/tests.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/tests.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -25,8 +21,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.eslintrc.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+            <state relative-caret-position="330">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -43,8 +39,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/tests.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+            <state relative-caret-position="242">
+              <caret line="113" column="12" selection-start-line="113" selection-start-column="12" selection-end-line="113" selection-end-column="12" />
+              <folding>
+                <element signature="e#200#3829#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -70,13 +69,13 @@
         <option value="$PROJECT_DIR$/tests.sh" />
         <option value="$PROJECT_DIR$/tests.js" />
         <option value="$PROJECT_DIR$/.eslintrc" />
-        <option value="$PROJECT_DIR$/test/tests.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/.eslintrc.js" />
+        <option value="$PROJECT_DIR$/test/tests.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="38" />
     <option name="y" value="53" />
     <option name="width" value="1642" />
@@ -94,11 +93,6 @@
             <path>
               <item name="node-map-backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="node-map-backend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="node-map-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="node-map-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -138,7 +132,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Mocha.Array">
+  <component name="RunManager" selected="Mocha./osrm">
     <configuration name="Array" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -170,8 +164,24 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="/osrm" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>SUITE</test-kind>
+      <test-file>$PROJECT_DIR$/test/tests.js</test-file>
+      <test-names>
+        <name value="/osrm" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Mocha./osrm" />
         <item itemvalue="Mocha.Array" />
         <item itemvalue="Mocha.Array.#indexOf()" />
       </list>
@@ -189,7 +199,7 @@
       <updated>1546923112987</updated>
       <workItem from="1546923114216" duration="11252000" />
       <workItem from="1546944363881" duration="360000" />
-      <workItem from="1546944726218" duration="2471000" />
+      <workItem from="1546944726218" duration="4451000" />
     </task>
     <servers />
   </component>
@@ -203,12 +213,21 @@
     <history-entry file="Array - 2019.01.09 at 10h 12m 14s.xml">
       <configuration name="Array" configurationId="mocha-javascript-test-runner" />
     </history-entry>
+    <history-entry file="Array - 2019.01.09 at 12h 08m 21s.xml">
+      <configuration name="Array" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="Array - 2019.01.09 at 12h 09m 58s.xml">
+      <configuration name="Array" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="_osrm - 2019.01.09 at 12h 10m 02s.xml">
+      <configuration name="/osrm" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14083000" />
+    <option name="totallyTimeSpent" value="16063000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="38" y="53" width="1642" height="1027" extended-state="0" />
+    <frame x="38" y="23" width="1642" height="1027" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24984577" />
@@ -216,14 +235,14 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32941177" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32941177" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32941177" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -273,6 +292,13 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/.eslintrc" />
+    <entry file="file://$PROJECT_DIR$/.eslintrc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
@@ -280,17 +306,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.eslintrc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/tests.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        <state relative-caret-position="242">
+          <caret line="113" column="12" selection-start-line="113" selection-start-column="12" selection-end-line="113" selection-end-column="12" />
+          <folding>
+            <element signature="e#200#3829#0" />
+          </folding>
         </state>
       </provider>
     </entry>
