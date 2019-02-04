@@ -14,7 +14,6 @@ const mercator = new SphericalMercator({
 
 mapnik.register_default_input_plugins();
 
-
 function makeVectorTile(options) {
   const extent = mercator.bbox(options.x, options.y, options.z, false, '3857');
   const map = new mapnik.Map(256, 256, '+init=epsg:3857');

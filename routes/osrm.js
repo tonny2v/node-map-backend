@@ -2,6 +2,7 @@
 /* eslint-env es6 */
 
 const Router = require('express-promise-router');
+
 const router = new Router();
 const path = require('path');
 const OSRM = require('osrm');
@@ -11,11 +12,12 @@ process.env.UV_THREADPOOL_SIZE = Math.ceil(require('os').cpus().length * 1.5);
 
 module.exports = router;
 
-var osrm = new OSRM(
+const osrm = new OSRM(
   {
-    path: path.join(__dirname,'../data/china-latest.osrm'),
-    algorithm: 'MLD'
-  });
+    path: path.join(__dirname, '../data/china-latest.osrm'),
+    algorithm: 'MLD',
+  },
+);
 
 // Accepts a query like:
 // http://localhost:8081/osrm?start=114.414307,22.521835&end=114.402290,21.523728
@@ -23,20 +25,20 @@ var osrm = new OSRM(
 
 router.get('/routing', (req, res) => {
   if (!req.query.start || !req.query.end) {
-    return res.json({'error':'invalid start and end query'});
+    return res.json({ error: 'invalid start and end query' });
   }
-  var coordinates = [];
-  var start = req.query.start.split(',');
-  coordinates.push([+start[0],+start[1]]);
-  var end = req.query.end.split(',');
-  coordinates.push([+end[0],+end[1]]);
-  var query = {
-    coordinates: coordinates,
+  const coordinates = [];
+  const start = req.query.start.split(',');
+  coordinates.push([+start[0], +start[1]]);
+  const end = req.query.end.split(',');
+  coordinates.push([+end[0], +end[1]]);
+  const query = {
+    coordinates,
     alternateRoute: req.query.alternatives !== 'false',
-    geometries: 'geojson'
+    geometries: 'geojson',
   };
   osrm.route(query, (err, result) => {
-    if (err) return res.json({'error':err.message});
+    if (err) return res.json({ error: err.message });
     return res.json(result);
   });
 });
@@ -44,14 +46,14 @@ router.get('/routing', (req, res) => {
 // http://localhost:8080/osrm/x/y/z
 // http://localhost:8080/osrm/3345/1783/12
 router.get('/:x/:y/:z', async (req, res) => {
-  let options = {
-    x: parseInt(req.params.x),
-    y: parseInt(req.params.y),
-    z: parseInt(req.params.z)
+  const options = {
+    x: +req.params.x,
+    y: +req.params.y,
+    z: +req.params.z,
   };
-  const {x,y,z} = options;
- 
-  let vectorTile = await new Promise((resolve, reject)=>{
+  const { x, y, z } = options;
+
+  const vectorTile = await new Promise((resolve, reject) => {
     osrm.tile([x, y, z], (err, response) => {
       if (err) reject(err);
       else {
@@ -60,9 +62,9 @@ router.get('/:x/:y/:z', async (req, res) => {
     });
   });
 
-  let data = await new Promise((resolve, reject) => {
+  const data = await new Promise((resolve, reject) => {
     zlib.deflate(vectorTile, (err, response) => {
-      if(err) reject(err);
+      if (err) reject(err);
       resolve(response);
     });
   });
@@ -76,12 +78,11 @@ router.get('/:x/:y/:z', async (req, res) => {
 
 router.use('/matching', (req, res) => {
   if (req.body) {
-    osrm.match(req.body, function(err, result) {
+    osrm.match(req.body, (err, result) => {
       if (err) throw err;
       console.log(result.tracepoints); // array of Waypoint objects
       console.log(result.matchings); // array of Route objects
-      return res.json({'tracepoints': result.tracepoints, 'matchings': result.matchings});
+      return res.json({ tracepoints: result.tracepoints, matchings: result.matchings });
     });
   }
 });
-

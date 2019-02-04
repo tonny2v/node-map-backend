@@ -1,10 +1,10 @@
 // ./routes/index.js
-const express = require('express')
+const express = require('express');
 const pgvt = require('./pgvt');
 const osrm = require('./osrm');
 
 module.exports = (app) => {
-  app.use(function (req, res, next) {
+  app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     next();
@@ -13,6 +13,6 @@ module.exports = (app) => {
   app.use(express.json());
 
   app.use('/pgvt', pgvt);
-  app.use('/osrm',osrm);
+  app.use('/osrm', osrm);
   // etc..
 };
