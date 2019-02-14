@@ -121,3 +121,22 @@ describe('/osrm', () => {
     });
   });
 });
+
+
+describe('/osrm', () => {
+  describe('#/nearest', () => {
+    it('should return status 200', () => {
+      request.post('http://localhost:8080/osrm/nearest', {
+        json: options,
+      }, (error, res, body) => {
+        if (error) {
+          console.error(error);
+          return;
+        }
+        console.log(`statusCode: ${res.statusCode}`);
+        assert.equal(res.statusCode, 200);
+        console.log(body);
+      });
+    });
+  });
+});

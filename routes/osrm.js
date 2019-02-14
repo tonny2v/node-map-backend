@@ -86,3 +86,26 @@ router.use('/matching', (req, res) => {
     });
   }
 });
+
+// http://localhost:8080/osrm/nearest?point=114.414307,22.521835&number=1
+router.use('/nearest', (req, res) => {
+  if (!req.query.point) {
+    return res.json({ error: 'invalid start and end query' });
+  }
+  const coordinates = [];
+  const point = req.query.point.split(',');
+  coordinates.push([+point[0], +point[1]]);
+  // default 3 if there is no input
+  const number = +(req.query.number || 3);
+  const options = {
+    coordinates,
+    number,
+    bearings: [[0, 20]],
+  };
+
+  // array of Waypoint objects
+  osrm.nearest(options, (err, result) => {
+    if (err) throw err;
+    return res.json({ waypoints: result.waypoints });
+  });
+});
