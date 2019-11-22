@@ -7,7 +7,7 @@
     "express-promise-router": "^3.0.3",
     "mapnik": "^4.0.2",
     "mocha": "^5.2.0",
-    "osrm": "^5.20.0",
+    "osrm": "^5.22.0",
     "pg": "^7.7.1",
     "promise": "^8.0.2",
     "request": "^2.88.0",
