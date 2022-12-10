@@ -3,7 +3,7 @@
     "test": "mocha"
   },
   "dependencies": {
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "express-promise-router": "^3.0.3",
     "mapnik": "^4.0.2",
     "mocha": "^5.2.0",
